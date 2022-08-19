@@ -1,5 +1,17 @@
 # Delphi Flask API Take-home
 
+## Dataset
+
+[Cheese Scores](https://www.kaggle.com/datasets/ericsims/world-cheese-awards-worlds-cheesiest-dataset?resource=download)
+
+    ID BIGINT,
+    COMPANY VARCHAR(128),
+    PRODUCT_NAME VARCHAR(128),
+    RATING VARCHAR(128),
+    CATEGORY VARCHAR(256),
+    COUNTY VARCHAR(128),
+    COUNTRY VARCHAR(128)
+
 ## Start the Database Container
 
 Start the database with the following command:
@@ -9,3 +21,5 @@ Start the database with the following command:
 In a separate terminal, run the following command to populate the database.
 
     docker exec cheese_database /bin/sh -c 'chmod +x /run/init/initialize_database.sh && ./run/init/initialize_database.sh'
+
+## Start the API Container
