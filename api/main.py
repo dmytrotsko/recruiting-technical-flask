@@ -4,7 +4,7 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 db = SQLAlchemy(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:strong_password@127.0.0.1/delphi'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://foo:bar@127.0.0.1/delphi'
 
 class Cheese(db.Model):
     __tablename__ = 'CHEESE_SCORES'

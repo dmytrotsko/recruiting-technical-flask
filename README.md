@@ -4,13 +4,13 @@
 
 [Cheese Scores](https://www.kaggle.com/datasets/ericsims/world-cheese-awards-worlds-cheesiest-dataset?resource=download)
 
-    ID BIGINT,
+    ID BIGINT PRIMARY KEY,
     COMPANY VARCHAR(128),
     PRODUCT_NAME VARCHAR(128),
     RATING VARCHAR(128),
     CATEGORY VARCHAR(256),
-    COUNTY VARCHAR(128),
-    COUNTRY VARCHAR(128)
+    COUNTRY VARCHAR(128),
+    COUNTY VARCHAR(128)
 
 ## Start the Database Container
 
