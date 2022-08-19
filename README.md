@@ -22,4 +22,12 @@ In a separate terminal, run the following command to populate the database.
 
     docker exec cheese_database /bin/sh -c 'chmod +x /run/init/initialize_database.sh && ./run/init/initialize_database.sh'
 
-## Start the API Container
+## Start the API
+
+Install the dependencies (preferably within a new Python3 virtual environment)
+
+    pip3 install -r requirements.txt
+
+Start the API
+
+    python3 api/main.py

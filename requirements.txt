@@ -1,0 +1,6 @@
+Flask==2.2.2
+Flask-SQLAlchemy==2.5.1
+mysql==0.0.3
+mysqlclient==2.1.1
+SQLAlchemy==1.4.40
+sqlparse==0.4.2
