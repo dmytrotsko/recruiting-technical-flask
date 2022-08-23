@@ -51,3 +51,12 @@ Start the API
    - Request example: `curl --location --request GET 'http://127.0.0.1:5000/cheese/country_scores'` 
    - Response: ![get_country_scores](readme_static_files/get_country_scores_response.png)
  
+## Usage
+
+
+There is a `Makefile` to setup development environment, run jobs and tests. You can run 
+```
+make help
+```
+to see all available commands with the `Makefile`.
+ 

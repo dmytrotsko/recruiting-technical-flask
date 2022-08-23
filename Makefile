@@ -20,9 +20,9 @@ down:
 
 help:
 	@echo "Usage & commands list:"
-	@echo "	* make to create venv and install libraries"
-	@echo "	* make build_api to build flask docker image"
-	@echo "	* make populate_database to load data into database"
-	@echo "	* make up to run project"
-	@echo "	* make down to stop"
+	@echo "	* [make] to create venv and install libraries"
+	@echo "	* [make build_api] to build flask docker image"
+	@echo "	* [make populate_database] to load data into database"
+	@echo "	* [make up] to run project"
+	@echo "	* [make down] to stop"
 
