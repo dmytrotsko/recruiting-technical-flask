@@ -29,8 +29,8 @@ services:
     image: python:3.8-alpine
     container_name: flask_api
     build:
-      context: ./api
-      dockerfile: ./Dockerfile
+      context: .
+      dockerfile: ./api/Dockerfile
     ports:
       - "80:80"
     links:
