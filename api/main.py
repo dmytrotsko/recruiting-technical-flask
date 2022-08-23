@@ -5,7 +5,7 @@ from sqlalchemy import func
 app = Flask(__name__)
 db = SQLAlchemy(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://foo:bar@127.0.0.1/delphi'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://foo:bar@mysql_database:3306/delphi'
 app.config['JSON_SORT_KEYS'] = False
 
 
@@ -127,4 +127,4 @@ def get_country_scores():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=80, debug=True)

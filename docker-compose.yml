@@ -1,0 +1,41 @@
+version: '0.1'
+
+networks:
+    app-tier:
+        driver: bridge
+
+services:
+  mysql_database:
+    image: mysql:latest
+    container_name: cheese_database
+    restart: always
+    build:
+      .
+    environment:
+      MYSQL_ROOT_HOST: 0.0.0.0
+      MYSQL_DATABASE: 'delphi'
+      MYSQL_ROOT_PASSWORD: 'strong_password'
+      MYSQL_USER: 'foo'
+      MYSQL_PASSWORD: 'bar'
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./database/init/:/run/init
+      - ./database/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - app-tier
+
+  api:
+    image: python:3.8-alpine
+    container_name: flask_api
+    build:
+      context: ./api
+      dockerfile: ./Dockerfile
+    ports:
+      - "80:80"
+    links:
+      - mysql_database
+    networks:
+      - app-tier
+    volumes:
+      - ./api:/run/api
